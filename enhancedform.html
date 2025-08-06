@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+    header, footer {
+      background: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    iframe, img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Our Site</h1>
+  <p>Your feedback matters most</p>
+</header>
+
+<main>
+
+  <section aria-label="Intro">
+    <h2>Why Your Input Matters</h2>
+    <ul>
+      <li>We value your opinion.</li>
+      <li>Your feedback helps us improve services.</li>
+      <li>All responses are confidential.</li>
+    </ul>
+  </section>
+
+  <section aria-label="Form Section">
+    <h2>Contact & Feedback Form</h2>
+
+    <form action="/submit" method="POST" aria-label="Contact Form">
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Centrine Muyoka" required autocomplete="name" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="muyoka@example.com" required autocomplete="email" />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone"  placeholder="+2547567890" required autocomplete="tel" />
+
+      <label for="birthdate">Date of Birth</label>
+      <input type="date" id="birthdate" name="birthdate" required />
+
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="">-- Select Your Country --</option>
+        <option value="ke">Kenya</option>
+        <option value="ug">Uganda</option>
+        <option value="tz">Tanzania</option>
+        <option value="rw">Rwanda</option>
+      </select>
+
+      <label for="feedback">Your Message</label>
+      <textarea id="feedback" name="feedback" rows="5" placeholder="Write your comments here..." required></textarea>
+
+      <label for="referrer">How did you hear about us?</label>
+      <input type="text" id="referrer" name="referrer" value="Website" readonly />
+
+      <label for="password">Set a Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Submit Form</button>
+    </form>
+  </section>
+
+  <section aria-label="Media Section">
+    <h2>How to Fill the Form (Video Guide)</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="Instructional Video"
+            width="100%" 
+            height="315"
+            allowfullscreen></iframe>
+
+    <h3>Sample Office Photo</h3>
+    <img src="https://via.placeholder.com/800x400.png?text=Our+Office+Reception" alt="Office Reception Area">
+  </section>
+
+  <section aria-label="Table Section">
+    <h2>Support Hours</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Opening Time</th>
+          <th>Closing Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Monday - Friday</td><td>8:00 AM</td><td>5:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM</td><td>1:00 PM</td></tr>
+        <tr><td>Sunday</td><td colspan="2">Closed</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Muyoka Tech. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
